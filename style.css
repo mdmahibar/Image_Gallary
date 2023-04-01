@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.search {
+    height: 40vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.search .content {
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.search h1 {
+    font-size: 2.65rem;
+    font-weight: 600;
+}
+
+.search p {
+    font-size: 1.5rem;
+    margin-top: 8px;
+}
+
+.search .search-box {
+    height: 55px;
+    margin: 45px;
+    position: relative;
+}
+
+.search-box i {
+    position: absolute;
+    left: 20px;
+    top:55%;
+    font-size: 1.4rem;
+    color: #8d8d8d;
+    transform: translateY(-50%);
+}
+
+input, button, i {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-box input {
+    width: 100%;
+    height: 100%;
+    font-size: 1.11rem;
+    padding-left: 55px;
+}
+
+.gallary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallary .images {
+    gap: 15px;
+    columns: 5 340px;
+    margin-top: 40px;
+    max-width: 95%;
+}
+
+.images .card {
+    list-style: none;
+    margin-bottom: 14px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.images .card .details {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.images .card:hover .details {
+    bottom: 0;
+    transition: .4s;
+}
+
+.photographer {
+    color: white;
+    font-size: 1.12rem;
+    display: flex;
+    /* align-items: center; */
+    gap: 5px;
+}
+
+.photographer i {
+    font-size: 1.4rem;
+    margin-right: 5px;
+}
+
+.details .photographer .span {
+    font-size: 1.4rem;
+}
+
+.card .details button {
+    padding: 3px 8px;
+    font-size: 1.1rem;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.images img {
+    width: 100%;
+}
+
+.gallary .load-more {
+    margin: 50px 0;
+    font-size: 1.2rem;
+    padding: 12px 27px;
+    background: #8a6cff;
+    cursor: pointer;
+    color: white;
+}
+
+.gallary .load-more.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.lightbox {
+    position: fixed;
+    z-index: 5;
+    background: rgba(0,0,0,0.65);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.lightbox.show {
+    display: block;
+}
+
+.lightbox .wrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 850px;
+    padding: 1rem;
+}
+
+.wrapper header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .photographer {
+    color: #333;
+}
+
+header .photographer i {
+    font-size: 1.7rem;
+}
+
+header .photographer span {
+    font-size: 1.7rem;
+}
+
+header .buttons i {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    font-size: 1.2rem;
+    background-color: #8a6cff;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.buttons i:last-child {
+    background-color: #8d8d8d;
+    margin-left: 10px;
+}
+
+.preview-img {
+    display: flex;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+.wrapper .preview-img {
+    max-height: 65vh;
+    max-width: 90vw;
+}
+
+.preview-img .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+@media screen and (max-width:576px) {
+    .search {
+        height: 40vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .search .content {
+        color: whitesmoke;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 1rem;
+    }
+    .search h1 {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+    .search p {
+        font-size: 1rem;
+        margin-top: 8px;
+        font-weight: bold;
+    }
+    
+}
